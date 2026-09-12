@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /blog.json
+---
+{
+  "version": 1,
+  "posts": [
+    {% for post in site.posts %}
+    {
+      "id": {{ post.fishwant_id | default: post.slug | jsonify }},
+      "title": {{ post.title | jsonify }},
+      "body": {{ post.content | jsonify }},
+      "date": {{ post.date | date_to_xmlschema | jsonify }},
+      "cover": {{ post.cover | default: 'orbit' | jsonify }},
+      "path": {{ post.path | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
