@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title | escape }} — Fishwant</title>
+  <meta http-equiv="refresh" content="0;url=/#post-{{ page.fishwant_id | default: page.slug | url_encode }}" />
+  <link rel="canonical" href="https://fishwant.com/#post-{{ page.fishwant_id | default: page.slug | url_encode }}" />
+  <style>body{background:#080d0e;color:#edf1ec;font:18px/1.8 system-ui,sans-serif;max-width:680px;margin:15vh auto;padding:24px}a{color:#d0e8b4}</style>
+</head>
+<body><h1>{{ page.title | escape }}</h1><p><a href="/#post-{{ page.fishwant_id | default: page.slug | url_encode }}">在 Fishwant 阅读这篇文章 →</a></p></body>
+</html>
